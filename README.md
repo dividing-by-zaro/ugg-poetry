@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Caveman Poetry
 
-## Getting Started
+A real-time multiplayer word-guessing party game. Teams take turns giving clues using simple "caveman" language to help teammates guess words.
 
-First, run the development server:
+## How to play
+
+1. Create a cave or join one with a 4-letter room code
+2. Pick a team (Red Tribe or Blue Tribe)
+3. The clue giver sees a word and describes it using simple language
+4. Teammates guess — partial match scores 1 point, full match scores 3
+5. The opposing team can see the answer and BONK if the clue giver cheats
+6. Team with the most points after all rounds wins
+
+## Development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npx tsx server.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Next.js 16 / React 19 / TypeScript
+- Express + Socket.IO (real-time multiplayer)
+- Tailwind CSS 4
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deployed on Railway. Requires Node.js >= 20.9.0.
