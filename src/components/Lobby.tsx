@@ -24,8 +24,8 @@ export default function Lobby({ gameState, onPickTeam, onStartGame, socketId }: 
     <div className="max-w-2xl mx-auto">
       {/* Room Code */}
       <div className="text-center mb-8">
-        <div className="text-sm uppercase tracking-widest text-cave-muted mb-1">Room Code</div>
-        <div className="text-5xl font-bold tracking-[0.3em] text-cave-gold">
+        <div className="text-sm uppercase tracking-widest text-cave-muted mb-1">Cave Word</div>
+        <div className="text-5xl font-bold tracking-wider text-cave-gold">
           {gameState.roomCode}
         </div>
         <div className="text-sm text-cave-muted mt-2">

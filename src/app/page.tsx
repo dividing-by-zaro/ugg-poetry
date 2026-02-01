@@ -125,15 +125,15 @@ export default function Home() {
           <div className="space-y-3">
             <div>
               <label className="block text-sm text-cave-muted mb-1 uppercase tracking-wider">
-                Room Code
+                Cave Word
               </label>
               <input
                 type="text"
                 value={roomCode}
                 onChange={e => setRoomCode(e.target.value.toUpperCase())}
-                placeholder="ABCD"
-                maxLength={4}
-                className="w-full bg-cave-card border-2 border-cave-muted/30 rounded-xl px-4 py-3 text-3xl text-center text-cave-gold font-bold tracking-[0.4em] placeholder-cave-muted/30 focus:outline-none focus:border-cave-gold/50 transition-colors uppercase"
+                placeholder="ROCK"
+                maxLength={10}
+                className="w-full bg-cave-card border-2 border-cave-muted/30 rounded-xl px-4 py-3 text-3xl text-center text-cave-gold font-bold tracking-widest placeholder-cave-muted/30 focus:outline-none focus:border-cave-gold/50 transition-colors uppercase"
                 onKeyDown={e => {
                   if (e.key === 'Enter') handleJoin();
                 }}

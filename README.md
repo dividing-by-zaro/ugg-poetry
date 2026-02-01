@@ -4,7 +4,7 @@ A real-time multiplayer word-guessing party game. Teams take turns giving clues 
 
 ## How to play
 
-1. Create a cave or join one with a 4-letter room code
+1. Create a cave or join one with a cave word (e.g. ROCK, EMBER, STORM)
 2. Pick a team (Red Tribe or Blue Tribe)
 3. The clue giver sees a word and describes it using simple language
 4. Teammates guess — partial match scores 1 point, full match scores 3

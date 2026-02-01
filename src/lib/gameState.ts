@@ -4,13 +4,21 @@ import { cards as allCards } from './cards';
 const games = new Map<string, GameState>();
 const socketToRoom = new Map<string, string>();
 
+const ROOM_WORDS = [
+  'FIRE', 'ROCK', 'BONE', 'CAVE', 'HUNT', 'MOON', 'FANG', 'CLAW',
+  'DUST', 'HOWL', 'TUSK', 'WOLF', 'BEAR', 'HERD', 'RAIN', 'TREE',
+  'LEAF', 'FISH', 'HAWK', 'DEER', 'HORN', 'BARK', 'FERN', 'NEST',
+  'PEAK', 'POND', 'MIST', 'ROAR', 'DAWN', 'DUSK', 'GLOW', 'SAND',
+  'SEED', 'VINE', 'THORN', 'SWIFT', 'STONE', 'FLAME', 'STORM',
+  'FROST', 'SMOKE', 'TRIBE', 'SPEAR', 'FLINT', 'SNARE', 'BRAVE',
+  'TRACK', 'AMBER', 'CREEK', 'RIDGE', 'MARSH', 'BLAZE', 'TALON',
+  'BISON', 'HERON', 'CEDAR', 'ASPEN', 'RAVEN', 'OTTER', 'EMBER',
+  'BIRCH', 'MOOSE', 'TROUT', 'EAGLE', 'CLIFF', 'BROOK', 'GROVE',
+  'PROWL', 'STALK', 'CHALK', 'HOUND', 'LODGE', 'SNAKE', 'CORAL',
+];
+
 function generateRoomCode(): string {
-  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
-  let code = '';
-  for (let i = 0; i < 4; i++) {
-    code += chars[Math.floor(Math.random() * chars.length)];
-  }
-  return code;
+  return ROOM_WORDS[Math.floor(Math.random() * ROOM_WORDS.length)];
 }
 
 function shuffleDeck(): Card[] {
